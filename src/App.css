@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .slider {
+    margin:0 10px;
+    overflow:"hidden";
+    padding:2rem 0;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .slider img {
+    width: 100%;
+    border-radius:10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .react-multi-carousel-list {
+  padding: 0rem 0 2rem 0;
   }
+
+  .custom-dot-list-style button{
+  border: none;
+  background: rgb(255, 68, 68);
+  }
+  .react-multi-carousel-dot.react-multi-carousel-dot--active button{
+  background: rgb(255, 68, 68) !important;
+  }
+
+
+
+.book-now{
+    background-color: rgb(255, 99, 1);
+    border-radius: 10px;
+
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    border: none;
+
 }
+
+.book-now::before {
+
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.book-now:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 50%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 50%;
+	}
+}
+
+
+.swiper-wrapper {
+  width: 100%;
+  height: max-content !important;
+  padding-bottom: 64px !important;
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+  position: relative;
+  }
+  .swiper-pagination-bullet {
+  background: #4f46e5;
+  }
+
+
+  .card {
+    min-width: 20vw;
+  }
+  .arrow {
+    top: 30%
+  }
+
+  #carrusel {
+    scroll-behavior: smooth;
+  }
